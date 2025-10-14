@@ -44,6 +44,15 @@
                         <a href="/about" class="text-gray-700 hover:text-primary transition duration-300 {{ Request::is('about') ? 'text-primary font-semibold' : '' }}">About</a>
                         <a href="/blog" class="text-gray-700 hover:text-primary transition duration-300 {{ Request::is('blog') ? 'text-primary font-semibold' : '' }}">Blog</a>
                         <a href="/contact" class="text-gray-700 hover:text-primary transition duration-300 {{ Request::is('contact') ? 'text-primary font-semibold' : '' }}">Contact</a>
+                        <a href="/admin" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300 {{ Request::is('admin') ? 'bg-secondary' : '' }}">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                Admin
+                            </span>
+                        </a>
                     </div>
                 </div>
 
@@ -66,6 +75,15 @@
                 <a href="/about" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-primary hover:text-white transition duration-300 {{ Request::is('about') ? 'bg-primary text-white' : '' }}">About</a>
                 <a href="/blog" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-primary hover:text-white transition duration-300 {{ Request::is('blog') ? 'bg-primary text-white' : '' }}">Blog</a>
                 <a href="/contact" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-primary hover:text-white transition duration-300 {{ Request::is('contact') ? 'bg-primary text-white' : '' }}">Contact</a>
+                <a href="/admin" class="block px-3 py-2 rounded-md bg-primary text-white hover:bg-secondary transition duration-300 {{ Request::is('admin') ? 'bg-secondary' : '' }}">
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Admin Dashboard
+                    </span>
+                </a>
             </div>
         </div>
     </nav>
