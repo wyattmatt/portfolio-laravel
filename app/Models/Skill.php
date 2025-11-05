@@ -20,4 +20,24 @@ class Skill extends Model
     protected $casts = [
         'proficiency_level' => 'integer',
     ];
+
+    /**
+     * Get the projects that use this skill.
+     */
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'project_skill')
+            ->using(ProjectSkill::class)
+            ->withPivot(['proficiency_used', 'is_primary', 'order'])
+            ->withTimestamps()
+            ->orderBy('project_skill.order');
+    }
+
+    /**
+     * Get projects where this skill is marked as primary.
+     */
+    public function primaryProjects()
+    {
+        return $this->projects()->wherePivot('is_primary', true);
+    }
 }

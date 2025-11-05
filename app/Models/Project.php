@@ -28,4 +28,24 @@ class Project extends Model
         'end_date' => 'date',
         'is_featured' => 'boolean',
     ];
+
+    /**
+     * Get the skills associated with this project.
+     */
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class, 'project_skill')
+            ->using(ProjectSkill::class)
+            ->withPivot(['proficiency_used', 'is_primary', 'order'])
+            ->withTimestamps()
+            ->orderBy('project_skill.order');
+    }
+
+    /**
+     * Get only the primary skills for this project.
+     */
+    public function primarySkills()
+    {
+        return $this->skills()->wherePivot('is_primary', true);
+    }
 }
